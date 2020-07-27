@@ -5,6 +5,10 @@ set -euo pipefail
 PLUGIN_DIR="$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)/.."
 MAX_SIZE=1024 # in KB
 
+echo "** STARTING MODIFIED PLUGIN **"
+
+echo "PLUGIN DIR: $PLUGIN_DIR"
+
 echo "--- :junit: Download the junits"
 
 artifacts_dir="$(pwd)/$(mktemp -d "junit-annotate-plugin-artifacts-tmp.XXXXXXXXXX")"
