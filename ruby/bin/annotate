@@ -21,6 +21,9 @@ class Failure < Struct.new(:name, :failed_test, :body, :job, :type, :message)
 end
 
 junit_report_files = Dir.glob(File.join(junits_dir, "**", "*"))
+
+STDERR.puts "junits_dir #{junits_dir}"
+STDERR.puts "JUnit report files #{junit_report_files}"
 testcases = 0
 failures = []
 
